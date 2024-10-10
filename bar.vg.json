@@ -1,0 +1,32 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Total Co2 Emissions in 2019" },
+    "width": 350,
+    "height": 350,
+    "data": {
+      "url": "https://raw.githubusercontent.com/AliciaT1402/FIT3179_HW4/main/co2Emissions_donut.csv"
+    },
+    "mark": {
+    "type": "bar",
+    "color": "#a63603"
+  },
+    "transform": [
+      {
+        "filter": "datum.Year == 2019"
+      }
+    ],
+    "encoding": {
+      "x": { "field": "Yearly Average CO₂ total emissions", "type": "quantitative", "title":"Daily Cost" },
+      "y": { "field": "Entity", "type": "nominal", "title":null}
+    },
+    "tooltip": [
+      { "field": "Entity", "type": "nominal", "title": "Country" },
+      {
+        "field": "Yearly Average CO₂ total emissions",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Avg Length of Stay"
+      }
+    ]
+  }

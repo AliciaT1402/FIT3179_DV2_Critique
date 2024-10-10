@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <title>FIT3179-Week9_Homework</title>
+
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      h1, h2 {
+        text-align: center;
+        color: #444;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #333;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+        font-weight: normal;
+      }
+
+      #map {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .charts-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .description {
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 1.2em;
+        color: #555;
+        width: 90%;
+        max-width: 800px;
+      }
+
+      .charts-row {
+        display: flex; /* Display charts in a row */
+        justify-content: space-around; /* Space out the charts */
+        width: 90%;
+        max-width: 1200px; /* Optional: limit width of the row */
+        margin: 20px auto; /* Center the row */
+      }
+
+      #line_chart, #bar_chart {
+        flex: 1; /* Allow both charts to grow and fill space equally */
+        margin: 0 10px; /* Add horizontal margin between charts */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>FIT3179 Data Visualisation Week 10 Homework</h1>
+    <h2>Alicia Tiopan (32895151)</h2>
+
+    <div class="charts-container">
+      <!-- Div for the map visualization -->
+      <div id="map"></div>
+
+      <!-- Descriptive text -->
+      <p class="description">
+        Tourism drives a country's economy. Especially after the global pandemic, we know how impactful tourism is to the economy. 
+        It generates jobs, fosters community development, and enhances cultural exchange. As countries recover, focusing on tourism 
+        can be a critical factor in revitalizing economies.
+      </p>
+
+      <!-- Container for line and bar charts -->
+      <div class="charts-row">
+        <div id="line_chart"></div>
+        <div id="bar_chart"></div>
+      </div>
+    </div>
+
+    <!-- Embed the JS files -->
+    <script src="map.js"></script>
+    <script src="line.js"></script>
+    <script src="bar.js"></script>
+  </body>
+</html>
